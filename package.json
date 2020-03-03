@@ -1,0 +1,19 @@
+{
+  "author": "Ulaş Sancak",
+  "dependencies": {
+    "parse-server": "~3.10.x",
+    "parse-dashboard": "~2.0.x",
+    "express": "latest"
+  },
+  "description": "Pitho",
+  "keywords": [
+    "pitho"
+  ],
+  "license": "ISC",
+  "main": "app.js",
+  "name": "pitho",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "version": "1.0.0"
+}
