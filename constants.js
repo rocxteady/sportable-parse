@@ -12,9 +12,9 @@ let isProduction = false;
 let port = 9090;
 
 if (hostname === 'tweetsquare') {
-    mongoDBURL = 'mongodb://ulas:201015ulas@tweetsquare.me:27017/sportable?ssl=true';
+    mongoDBURL = 'mongodb://ulas:201015ulas@sportable.live:27017/sportable';
     serverURL = 'https://localhost:'+port+'/sportable';
-    serverRemoteURL = 'https://tweetsquare.me:'+port+'/sportable';
+    serverRemoteURL = 'https://sportable.live:'+port+'/sportable';
     isSecure = true;
     isProduction = true;
  }
