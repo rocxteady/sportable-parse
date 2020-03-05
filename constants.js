@@ -4,24 +4,24 @@
 
 let os = require("os");
 let hostname = os.hostname();
-console.log('hostname = '+hostname);
 let mongoDBURL = null;
 let serverURL = null;
 let serverRemoteURL = null;
 let isSecure = false;
 let isProduction = false;
+let port = 9090;
 
 if (hostname === 'tweetsquare') {
-    mongoDBURL = 'mongodb://ulas:201015ulas@tweetsquare.me:27017/pitho?ssl=true';
-    serverURL = 'https://localhost:8081/pitho';
-    serverRemoteURL = 'https://tweetsquare.me:8081/pitho';
+    mongoDBURL = 'mongodb://ulas:201015ulas@tweetsquare.me:27017/sportable?ssl=true';
+    serverURL = 'https://localhost:'+port+'/sportable';
+    serverRemoteURL = 'https://tweetsquare.me:'+port+'/sportable';
     isSecure = true;
     isProduction = true;
  }
  else {
-    mongoDBURL = 'mongodb://ulas:201015ulas@localhost:27017/pitho';
-    serverURL = 'http://localhost:8081/pitho';
-    serverRemoteURL = 'http://localhost:8081/pitho';
+    mongoDBURL = 'mongodb://ulas:201015ulas@localhost:27017/sportable';
+    serverURL = 'http://localhost:'+port+'/sportable';
+    serverRemoteURL = 'http://localhost:'+port+'/sportable';
  }
 
 module.exports = Object.freeze({
@@ -32,11 +32,11 @@ module.exports = Object.freeze({
     IS_PRODUCTION: isProduction,
     APNS_FILE_NAME: 'AuthKey_HC3M2JQU49.p8',
     APNS_KEY_ID: 'HC3M2JQU49',
-    PORT: 8081,
-    APP_NAME: 'Pitho',
-    APP_ID: 'me.pitho',
+    PORT: port,
+    APP_NAME: 'Sportable',
+    APP_ID: 'live.sportable',
     iOS_TEAM_ID: '3U82SFTT2K',
-    iOS_BUNDLE: 'me.tweetsquare.ios',
+    iOS_BUNDLE: 'live.sportable.ios',
     CLOUD_PATH: 'cloud/main.js',
     MASTER_KEY: 'gT8XXacaGdzMK6uzeQCyOZPs4wBimNuv',
     CLIENT_KEY: 'gOUh2TrfXVabvegNUh0NJnbgWfHo8lM5',

@@ -71,7 +71,7 @@ app.use('/dashboard', dashboard);
 //app.use('/public', express.static(path.join(__dirname, '/public')));
 
 // Serve the Parse API on the /parse URL prefix
-var mountPath = '/pitho';
+var mountPath = '/sportable';
 app.use(mountPath, api);
 
 // Parse Server plays nicely with the rest of your web routes
@@ -88,8 +88,8 @@ app.use(mountPath, api);
 var httpServer = require('http').createServer(app);
 if (constants.IS_SECURE) {
     var options = {
-        key: fs.readFileSync('tweetsquarekey.pem'),
-        cert: fs.readFileSync('tweetsquare.me.pem'),
+        key: fs.readFileSync('privkey.pem'),
+        cert: fs.readFileSync('fullchain.pem'),
         requestCert: false,
         rejectUnauthorized: true
     };
