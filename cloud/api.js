@@ -1,3 +1,5 @@
+const DateUtils = require("./dateutils.js");
+
 const constants = {
     baseURL: "https://apiv2.apifootball.com",
     apiKey: "a3c29489b68db8f0145d9087e843768232ac49ade993681c576e97955da31742"
@@ -18,8 +20,9 @@ const makeLiveEventsRequest = function() {
         params: {
             APIkey: constants.apiKey,
             action: endpoints.events.action,
-            from: '2020-02-24', /* DateUtils.function(new Date()),*/
-            to: '2020-02-24' /*DateUtils.function(new Date())*/
+            timezone: 'Europe/Istanbul',
+            from: DateUtils.function(new Date()),
+            to: DateUtils.function(new Date())
         }
     });
 };

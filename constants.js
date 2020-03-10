@@ -13,7 +13,7 @@ let port = 9090;
 
 if (hostname === 'tweetsquare') {
     mongoDBURL = 'mongodb://ulas:201015ulas@sportable.live:27017/sportable';
-    serverURL = 'https://localhost:'+port+'/sportable';
+    serverURL = 'https://sportable.live:'+port+'/sportable';
     serverRemoteURL = 'https://sportable.live:'+port+'/sportable';
     isSecure = true;
     isProduction = true;

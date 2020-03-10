@@ -39,6 +39,8 @@ function getLiveEventsFromParse() {
             if (liveEvents !== undefined) {
                 resolve(liveEvents);
             }
+        }).catch(function (error) {
+            reject(error);
         });
     });
 }
@@ -47,7 +49,13 @@ function getLiveEventsFromAPI() {
     return new Promise((resolve, reject) => {
         api.makeLiveEventsRequest().then(function (httpResponse) {
             const jsonResponse = JSON.parse(httpResponse.text);
-            resolve(jsonResponse);
+            const status = jsonResponse.error;
+            if (status !== undefined) {
+                reject(jsonResponse);
+            }
+            else {
+                resolve(jsonResponse);
+            }
         }, function (httpResponse) {
             reject(httpResponse.text);
             console.error('Request failed with response code ' + httpResponse.status);

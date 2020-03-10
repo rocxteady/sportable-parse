@@ -1,4 +1,4 @@
-class DateUtils {
+module.exports = class DateUtils {
 
     static function(date) {
         return date.getFullYear() + '-' +
@@ -6,4 +6,4 @@ class DateUtils {
         ("0" + (date.getDate())).slice(-2);
     }
 
-}
+};
