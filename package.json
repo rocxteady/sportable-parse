@@ -1,7 +1,7 @@
 {
   "author": "Sportable",
   "dependencies": {
-    "parse-server": "~3.10.x",
+    "parse-server": "~4.5.x",
     "parse-dashboard": "~2.0.x",
     "express": "latest"
   },
